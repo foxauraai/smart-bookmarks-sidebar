@@ -1,0 +1,60 @@
+{
+  "manifest_version": 2,
+  "name": "Smart Bookmarks Sidebar",
+  "version": "1.0.0",
+  "description": "A smart bookmarks sidebar to color, drag and drop, rename, and save browser tabs — all in one place, built by Foxaura AI.",
+
+  "icons": {
+    "64": "icons/icon-64.png",
+    "128": "icons/icon-128.png"
+  },
+
+  "permissions": [
+    "bookmarks",
+    "tabs",
+    "activeTab",
+    "storage",
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+
+  "sidebar_action": {
+    "default_title": "Smart Bookmarks",
+    "default_panel": "sidebar.html",
+    "default_icon": {
+      "64": "icons/icon-64.png",
+      "128": "icons/icon-128.png"
+    },
+    "open_at_install": false
+  },
+
+  "browser_action": {
+    "default_title": "Smart Bookmarks",
+    "default_icon": {
+      "64": "icons/icon-64.png",
+      "128": "icons/icon-128.png"
+    },
+    "browser_style": false
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "smartbookmarks@foxauraai.com",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+
+  "developer": {
+    "name": "Foxaura AI",
+    "url": "https://foxauraai.com/"
+  },
+
+  "homepage_url": "https://foxauraai.com/"
+}
